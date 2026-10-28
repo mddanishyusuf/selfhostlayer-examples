@@ -1,0 +1,7 @@
+{
+  "name": "example-express",
+  "private": true,
+  "packageManager": "yarn@1.22.22",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "^5.1.0" }
+}
