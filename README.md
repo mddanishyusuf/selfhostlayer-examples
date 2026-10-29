@@ -13,6 +13,8 @@ Tiny apps that Self Host Layer's tests deploy from this repo's GitHub tarball. O
 
 Every server app answers `GET /` with its name and `GET /api/health` (Express: `/health`) with `ok`.
 
+`next/` also counts visits in SQLite under `DATA_DIR` (`GET /api/visits`, `?add=1` adds one), for the backup and restore tests.
+
 ## Known quirks (on purpose)
 
 - `nuxt/package-lock.json` trips `npm ci` ("not in sync", an npm 11 bug with nested optional dependencies) even when regenerated from scratch. Real projects hit this too, so it stays: the builder must fall back to `npm install` and warn.
