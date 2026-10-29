@@ -13,7 +13,7 @@ Tiny apps that Self Host Layer's tests deploy from this repo's GitHub tarball. O
 
 Every server app answers `GET /` with its name and `GET /api/health` (Express: `/health`) with `ok`.
 
-`next/` also counts visits in SQLite under `DATA_DIR` (`GET /api/visits`, `?add=1` adds one), for the backup and restore tests.
+`next/` also counts visits in SQLite under `DATA_DIR` (`GET /api/visits`, `?add=1` adds one), for the backup and restore tests, and in Redis when it has one (`GET /api/redis`, `?add=1`).
 
 ## Known quirks (on purpose)
 
